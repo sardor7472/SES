@@ -1,0 +1,41 @@
+/* Flex Media
+=================================================================*/
+
+/* 1200px (Min Width)
+=================================================================*/
+@media screen and (min-width: 1200px) {
+  //1200px (Min Width)
+}
+
+
+/* 992px (Min Width)
+=================================================================*/
+@media screen and (min-width: 992px) {
+  .text-lg-right {
+    text-align: right !important;
+  }
+  .text-lg-left {
+    text-align: left !important;
+  }
+  .justify-content-lg-start {
+    justify-content: flex-start;
+  }
+  //992px (Min Width)
+}
+
+
+/* 768px (Min Width)
+=================================================================*/
+@media screen and (min-width: 768px) {
+  //768px (Min Width)
+}
+
+
+/* 576px (Min Width)
+=================================================================*/
+@media screen and (min-width: 576px) {
+  //1200px (Min Width)
+}
+
+
+/*========== | Flex Media | ==========*/

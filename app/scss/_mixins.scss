@@ -1,0 +1,169 @@
+/* Button Color
+*****************************************************************************************************/
+@mixin ButtonDark($background, $percent: 10%) {
+  background: $background;
+
+  &:hover {
+    background: darken($background, $percent);
+  }
+}
+
+
+@mixin ButtonLight($background, $percent: 10%) {
+  background: $background;
+
+  &:hover {
+    background: lighten($background, $percent);
+  }
+}
+
+
+@mixin ButtonReverse($background, $color) {
+  background: $background;
+  color: $color;
+
+  &:hover {
+    background: $color;
+    color: $background;
+  }
+}
+
+/*********** Button Color ***********/
+
+
+/* Placeholder
+*****************************************************************************************************/
+@mixin Placeholder($color: inherit) {
+
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+
+  &::placeholder {
+    color: $color;
+    opacity: 1;
+  }
+}
+
+/*********** Placeholder ***********/
+
+
+/* Text Mask
+*****************************************************************************************************/
+@mixin TextMask($elemHeight, $maskHeight, $type: true, $maskColor: #fff) {
+  @if $type {
+    height: $elemHeight + px;
+  } @else {
+    max-height: $elemHeight + px;
+  }
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    display: block;
+    height: $maskHeight + px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    @if $type {
+      bottom: 0;
+    } @else {
+      top: ($elemHeight - $maskHeight) + px;
+    }
+    background: linear-gradient(to right, rgba($maskColor, 0.15), $maskColor);
+  }
+}
+
+/*********** Text Mask ***********/
+
+
+/* Animation
+*****************************************************************************************************/
+@mixin AnimationKey($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+/*********** Animation ***********/
+
+
+/* Fonts
+*****************************************************************************************************/
+@mixin Fonts($name, $path, $weight: null, $style: null) {
+  @font-face {
+    font-family: $name;
+    src: url($path);
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+/*********** Fonts ***********/
+
+
+/* Fixed img
+*****************************************************************************************************/
+
+@mixin fix-img($height, $width, $contain: false) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: $height;
+    width: $width;
+    @if $contain {
+      object-fit: contain;
+    } @else {
+      object-fit: cover;
+    }
+  }
+}
+
+/*********** Fixed img ***********/
+
+
+/* Fixed img
+*****************************************************************************************************/
+@mixin psevdo($psev:before, $type: false, $top:null, $right:null, $bottom:null, $left:null) {
+  @extend .pos-r;
+  &::#{$psev} {
+    @if $type {
+      top: $top;
+      right: $right;
+      bottom: $bottom;
+      left: $left;
+      @extend .pos-a;
+      @content
+    } @else {
+      @content
+    }
+  }
+  /*********** Fixed img ***********/
+}
+
+
+/* circled
+*****************************************************************************************************/
+@mixin circled($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+/*********** circled ***********/

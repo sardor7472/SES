@@ -1,0 +1,392 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: $txt-col;
+  font-family: $fontBase;
+}
+
+
+.d-f {
+  display: flex;
+}
+
+.jus-con-between {
+  justify-content: space-between;
+}
+
+.jus-con-center {
+  justify-content: center;
+}
+
+.pos-a {
+  position: absolute;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.regular-padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+
+.f-b {
+  font-weight: 900;
+}
+
+.base-col {
+  color: $base-col
+}
+
+.link-col {
+  color: $link-col;
+}
+
+.wh-col {
+  color: #fff;
+}
+
+.cur-p {
+  cursor: pointer;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+ul {
+  margin-top: 0;
+}
+
+
+
+.circle {
+  border-radius: 50%;
+}
+
+.br-10 {
+  border-radius: 10px;
+}
+
+input.is-invalid {
+  border: 1px solid red !important;
+
+  &::placeholder {
+    color: red;
+  }
+}
+
+textarea.is-invalid {
+  border: 1px solid red !important;
+
+  &::placeholder {
+    color: red
+  }
+}
+
+.f-semi {
+  font-weight: 600;
+}
+
+.f-14 {
+  font-size: 14px;
+}
+
+.f-16 {
+  font-size: 16px;
+}
+
+.bread-pad {
+  padding-bottom: 120px !important;
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+a,
+button,
+select,
+input,
+textarea {
+  outline: 0 !important;
+}
+
+
+a {
+  display: inline-block;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+
+button {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+}
+
+
+ul {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+li {
+  text-align: inherit;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-family: 'Proxima', serif;
+
+}
+p{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+strong,
+b {
+  font-weight: 700;
+}
+
+
+/* Custom Classes
+=================================================================*/
+.ap-n {
+  appearance: none;
+}
+
+.us-n {
+  user-select: none;
+}
+
+.fx-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.h-100 {
+  height: 100%;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+.mh-100vh {
+  min-height: 100vh;
+}
+
+
+.ov-h {
+  overflow: hidden !important;
+}
+
+.bg-cover {
+  background: center / cover no-repeat;
+}
+
+.bg-contain {
+  background: center / contain no-repeat;
+}
+
+
+.txt-editor {
+  color: #616161;
+  line-height: 36px;
+
+  ul {
+    margin-bottom: 1rem;
+    padding-left: 40px;
+    list-style: initial;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    display: inline;
+    text-decoration: underline;
+    color: $txt-col;
+  }
+}
+
+.placeholder {
+
+  &::-webkit-input-placeholder {
+    color: inherit;
+  }
+
+  &::-moz-placeholder {
+    color: inherit;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: inherit;
+  }
+
+  &:-moz-placeholder {
+    color: inherit;
+    opacity: 1;
+  }
+
+  &::placeholder {
+    color: inherit;
+    opacity: 1;
+  }
+}
+
+.spinner {
+
+  & {
+    -moz-appearance: textfield;
+  }
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+
+.equal-offsets {
+  margin: -15px;
+
+  > .col,
+  > [class*=col-] {
+    padding: 15px;
+  }
+}
+
+
+.transition {
+  transition: all .25s ease-in-out;
+}
+
+
+.d-flex {
+  display: flex;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.pos-a {
+  position: absolute;
+}
+
+/*========== Custom Classes ==========*/
+
+
+/* Internet Explorer
+=================================================================*/
+.ie_bx {
+  width: 100%;
+  padding-top: 100px;
+  position: fixed;
+  z-index: 10010;
+  text-align: center;
+
+  h2 {
+
+    & + & {
+      margin-top: 20px;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.ie_bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background-color: rgba(#fff, 0.88);
+}
+
+/*========== heading ==========*/
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.3rem
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+
+}
+
+/*========== heading ==========*/
+
+
+/*========== Internet Explorer ==========*/
+
+
+/* display
+=================================================================*/
+.d-block {
+  display: block;
+}

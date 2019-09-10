@@ -1,0 +1,30 @@
+
+@import 'mixins';
+
+$fontBase: 'Proxima';
+$fontBasePath: '../fonts/proxima/';
+
+
+
+
+/* proxima
+*****************************************************************************************************/
+
+/* Semi Bold
+----------------------------------------*/
+@include Fonts($fontBase, $fontBasePath + 'proximaBold.otf', 900);
+
+
+/* Semi Bold
+----------------------------------------*/
+@include Fonts($fontBase, $fontBasePath + 'proximaSemiBold.ttf', 600);
+
+
+/* Regular
+----------------------------------------*/
+@include Fonts($fontBase, $fontBasePath + 'proximaRegular.otf', 400);
+
+
+
+
+
