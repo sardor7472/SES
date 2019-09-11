@@ -5,9 +5,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap&subset=cyrillic-ext"
-          rel="stylesheet">
+    <!--+++++++++++++ | libs style | +++++++++++++-->
     <link rel="stylesheet" href="libs/OwlCarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <!--+++++++++++++ | custom style | +++++++++++++-->
     <link rel="stylesheet" href="css/style.min.css">
     <title>SES</title>
 </head>
@@ -18,11 +19,11 @@
 <div class="header">
 
 
-    <div class="header-burger">
-        <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32"
-             width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-             xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
-    </div>
+    <!--    <div class="header-burger">-->
+    <!--        <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32"-->
+    <!--             width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"-->
+    <!--             xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>-->
+    <!--    </div>-->
 
 
     <div class="container">
@@ -54,7 +55,7 @@
                         </div>
                     </div>
                     <div class="header-call">
-                        <a href="">Заказать звонок</a>
+                        <a href="" class="wh-col">Заказать звонок</a>
                     </div>
                     <div class="header-lang">
                         <span class="header-lang-rus">
@@ -72,20 +73,21 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container main-nav">
     <div class="header-nav">
         <div class="header-nav-link">
             <ul>
-                <li class="active"><a href="">О нас</a></li>
-                <li class=""><a href="">новости</a></li>
-                <li class=""><a href="">каталог товаров</a></li>
-                <li class=""><a href="">каталог услуг</a></li>
-                <li class=""><a href="">Проекты</a></li>
-                <li class=""><a href="">блог</a></li>
-                <li class=""><a href="">контакты</a></li>
+                <li class=" header-nav-link-item active"><a href="">О нас</a></li>
+                <li class="header-nav-link-item"><a href="">новости</a></li>
+                <li class="header-nav-link-item"><a href="">каталог товаров</a></li>
+                <li class="header-nav-link-item"><a href="">каталог услуг</a></li>
+                <li class="header-nav-link-item"><a href="">Проекты</a></li>
+                <li class="header-nav-link-item"><a href="">блог</a></li>
+                <li class="header-nav-link-item"><a href="">контакты</a></li>
+                <li id="line" class="line"></li>
             </ul>
         </div>
-        <div class="brochure">
+        <div class="brochure text-md-left text-center">
             <a href="">Скачать брошюру
                 <img src="images/header-skachat.png" alt="">
             </a>
@@ -97,7 +99,7 @@
 <!--end header-->
 
 <!--=+=+=+=+=+=+=+=+=+=+=+=+ | start main slider | =+=+=+=+=+=+=+=+=+=+=+=+ -->
-<div class="main-slider owl-carousel">
+<div class="main-slider owl-carousel to-top">
     <div class="main-slider-item" style="background-image: url(images/main-slider-image.png);">
         <div class="container">
             <div class="main-slider-content">
@@ -108,7 +110,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </p>
                 <div class="main-slider-more">
-                    <a href="">
+                    <a href="" class="wh-col">
                         Подробнее
                         <img src="images/slider-more.png" alt="">
                     </a>
@@ -162,7 +164,8 @@
                         <img src="images/product1.png" alt="">
                     </div>
                     <h3 class="main-one-txt">Gas metering</h3>
-                    <p class="main-one-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    <p class="main-one-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut
                         labore et dolore magna aliqua.
                     </p>
                 </a>
@@ -173,7 +176,8 @@
                         <img src="images/product1.png" alt="">
                     </div>
                     <h3 class="main-one-txt">Gas metering</h3>
-                    <p class="main-one-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    <p class="main-one-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut
                         labore et dolore magna aliqua.
                     </p>
                 </a>
@@ -184,7 +188,8 @@
                         <img src="images/product1.png" alt="">
                     </div>
                     <h3 class="main-one-txt">Gas metering</h3>
-                    <p class="main-one-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    <p class="main-one-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut
                         labore et dolore magna aliqua.
                     </p>
                 </a>
@@ -195,7 +200,8 @@
                         <img src="images/product1.png" alt="">
                     </div>
                     <h3 class="main-one-txt">Gas metering</h3>
-                    <p class="main-one-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    <p class="main-one-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut
                         labore et dolore magna aliqua.
                     </p>
                 </a>
@@ -206,14 +212,75 @@
 <div class="main-two">
     <div class="container">
         <h1 class="main-two-title">Товары</h1>
-        <div class="row">
+        <div class="row equal-offsets">
             <div class="col-lg-4 col-md-6">
                 <a href="/" class="main-one-product txt-editor">
                     <div class="main-two-img">
                         <img src="images/product2.png" alt="">
                     </div>
-                    <h3 class="main-one-txt">Gas metering</h3>
-                    <p class="main-two-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    <h3 class="main-two-txt">Pipe fittings</h3>
+                    <p class="main-two-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a href="/" class="main-one-product txt-editor">
+                    <div class="main-two-img">
+                        <img src="images/product3.png" alt="">
+                    </div>
+                    <h3 class="main-two-txt">Hardware</h3>
+                    <p class="main-two-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a href="/" class="main-one-product txt-editor">
+                    <div class="main-two-img">
+                        <img src="images/product4.png" alt="">
+                    </div>
+                    <h3 class="main-two-txt">Pressure vessels and heat exchanger</h3>
+                    <p class="main-two-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a href="/" class="main-one-product txt-editor">
+                    <div class="main-two-img">
+                        <img src="images/product5.png" alt="">
+                    </div>
+                    <h3 class="main-two-txt">Manual valve</h3>
+                    <p class="main-two-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a href="/" class="main-one-product txt-editor">
+                    <div class="main-two-img">
+                        <img src="images/product6.png" alt="">
+                    </div>
+                    <h3 class="main-two-txt">Pumps</h3>
+                    <p class="main-two-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a href="/" class="main-one-product txt-editor">
+                    <div class="main-two-img">
+                        <img src="images/product7.png" alt="">
+                    </div>
+                    <h3 class="main-two-txt">Process equipment / Package</h3>
+                    <p class="main-two-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut
                         labore et dolore magna aliqua.
                     </p>
                 </a>
@@ -222,8 +289,157 @@
     </div>
 </div>
 
-</div>
 
+<!--+++++++++++++++++ | start main about | +++++++++++++++++-->
+<div class="regular-padding main-about">
+    <div class="container">
+        <div class="row equal-offsets">
+            <div class="col-lg-4">
+                <img src="images/main-about-img.png" alt="">
+            </div>
+            <div class="col-lg-8">
+                <h1 class="main-one-title mb-2">О компании</h1>
+                <div class="txt-editor">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                        id est laborum.</p>
+                </div>
+                <div class="main-slider-more">
+                    <a href="">
+                        Подробнее
+                        <img src="images/right-arrow.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--end main about-->
+
+
+<div class="regular-padding">
+    <div class="container">
+        <!--+++++++++++++++++ | start advantages | +++++++++++++++++-->
+        <h1 class="main-one-title mb-3">Наши преимущества</h1>
+        <div class="row  main-advantage">
+            <div class="col-lg-3 col-md-6">
+                <div class="main-advantage-box">
+                    <h2 class="base-col f-bold">01.</h2>
+                    <h3 class="f-semi">Широкий спектр применения</h3>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="main-advantage-box">
+                    <h2 class="base-col f-bold">02.</h2>
+                    <h3 class="f-semi">Высокое качество</h3>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="main-advantage-box">
+                    <h2 class="base-col f-bold">03.</h2>
+                    <h3 class="f-semi">Cовременные стандарты</h3>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="main-advantage-box">
+                    <h2 class="base-col f-bold">04.</h2>
+                    <h3 class="f-semi">Большой опыт</h3>
+                </div>
+            </div>
+        </div><!--end advantages-->
+
+
+        <!--+++++++++++++++++ | start main news | +++++++++++++++++-->
+        <div class="regular-padding">
+            <h1 class="main-one-title mb-3">Новости</h1>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="main-news-box main-news-box-full">
+                        <div class="main-news-img mb-1">
+                            <img src="images/news-img.png" alt="">
+                            <time>10.04.2019</time>
+                        </div>
+                        <div class="main-news-content">
+                            <h3 class="f-semi mb-l"><a href="">Lorem ipsfum dolor sit amet, consectetur adipiscing
+                                elit</a></h3>
+                            <div class="txt-editor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="main-news-box-little main-news-box">
+                        <div class="main-news-img">
+                            <img src="images/news-img.png" alt="">
+                            <time>10.04.2019</time>
+                        </div>
+                        <div class="main-news-content">
+                            <h3 class="f-semi mb-l"><a href="">Lorem ipsfum dolor sit amet, consectetur adipiscing
+                                elit</a></h3>
+                            <div class="txt-editor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-news-box-little main-news-box">
+                        <div class="main-news-img">
+                            <img src="images/news-img.png" alt="">
+                            <time>10.04.2019</time>
+                        </div>
+                        <div class="main-news-content">
+                            <h3 class="f-semi mb-l"><a href="">Lorem ipsfum dolor sit amet, consectetur adipiscing
+                                elit</a></h3>
+                            <div class="txt-editor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-news-box-little main-news-box">
+                        <div class="main-news-img">
+                            <img src="images/news-img.png" alt="">
+                            <time>10.04.2019</time>
+                        </div>
+                        <div class="main-news-content">
+                            <h3 class="f-semi mb-l"><a href="">Lorem ipsfum dolor sit amet, consectetur adipiscing
+                                elit</a></h3>
+                            <div class="txt-editor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!--end main news-->
+
+        <!--+++++++++++++++++ | start partners section | +++++++++++++++++-->
+        <div class="">
+            <h1 class="main-one-title mb-2">Наши партнеры</h1>
+            <div class="owl-carousel partner-slider">
+                <img src="images/partner-img.png" alt="">
+                <img src="images/partner-img2.png" alt="">
+                <img src="images/partner-img3.png" alt="">
+                <img src="images/partner-img4.png" alt="">
+                <img src="images/partner-img4.png" alt="">
+                <img src="images/partner-img4.png" alt="">
+            </div>
+        </div>
+        <!--        end partners section-->
+
+    </div>
+
+
+</div>
 <!--start footer-->
 
 <div class="footer">
@@ -272,25 +488,25 @@
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6">
                     <ul class="footer-menu">
-                        <li><a href=""> О нас
+                        <li><a class="wh-col" href=""> О нас
                         </a></li>
-                        <li><a href=""> Новости
+                        <li><a class="wh-col" href=""> Новости
                         </a></li>
-                        <li><a href=""> Каталог товаров
+                        <li><a class="wh-col" href=""> Каталог товаров
                         </a></li>
-                        <li><a href=""> Каталог услуг
+                        <li><a class="wh-col" href=""> Каталог услуг
                         </a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6">
                     <ul class="footer-right-menu">
-                        <li><a href=""> проекты
+                        <li><a href="" class="wh-col"> проекты
 
                         </a></li>
-                        <li><a href=""> блог
+                        <li><a href="" class="wh-col"> блог
 
                         </a></li>
-                        <li><a href=""> Контакты
+                        <li><a href="" class="wh-col"> Контакты
 
                         </a></li>
                     </ul>
@@ -302,7 +518,8 @@
                         <p class="footer-left-ses">2019 © “SES” Все права защищены</p>
                     </div>
                     <div class="col-lg-3 col-md-5 col-sm-6">
-                        <p class="footer-right-sos">Web developed by <a href="#">SOS Group</a></p>
+                        <p class="footer-right-sos">Web developed by <a href="http://sos.uz" style="border-bottom: 1px solid;  color: inherit">SOS Group</a>
+                        </p>
                     </div>
                 </div>
             </div>
