@@ -11,6 +11,15 @@
   box-sizing: border-box;
 }
 
+.button-hover {
+  @extend .transition;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+  }
+}
+
 
 .f-15 {
   font-size: 15px;
@@ -64,10 +73,6 @@ a {
 
   padding: 15px 0;
 
-  &-logo {
-    text-align: left;
-  }
-
   &-main {
     display: flex;
     flex-wrap: wrap;
@@ -85,7 +90,6 @@ a {
   &-call {
     font-weight: 600;
     font-size: 14px;
-    color: #fff;
     text-transform: uppercase;
 
     a {
@@ -93,6 +97,8 @@ a {
       background: #8ec220;
       display: inline-block;
       border-radius: 45px;
+      color: #fff;
+
     }
   }
 
@@ -145,20 +151,10 @@ a {
       width: 10px;
       height: 6px;
       background: url(../images/header-lang.png);
-
-
     }
   }
 
 }
-
-/*hamburger start*/
-.header-burger {
-  fill: red;
-  cursor: pointer;
-}
-
-/*end hamburger*/
 
 /*nav start*/
 .brochure {
@@ -247,9 +243,7 @@ a {
 //******
 // ******* main slider ******
 // ********
-.to-top {
-  margin-top: -30px;
-}
+
 
 .main-slider {
 
@@ -535,6 +529,10 @@ a {
   .owl-item {
     opacity: .3;
     @extend .transition;
+
+    img {
+      margin: 0 auto;
+    }
 
     &.center {
       opacity: 1;
@@ -843,6 +841,7 @@ a {
     flex: 0 0 460px;
     @include fix-img(300px, 460px)
   }
+
   //end projects
 }
 
@@ -850,12 +849,14 @@ a {
 .service-box {
   padding-bottom: 30px;
   @extend .pos-r;
+
   &:hover {
 
     &::before {
       background: $base-col;
     }
   }
+
   &::before {
     content: '';
     width: 80px;
@@ -865,14 +866,113 @@ a {
     left: 0;
     @extend .pos-a, .transition;
   }
+
   &-img {
     @include fix-img(200px, 340px, true)
   }
+
   &-content {
     @include TextMask(155, 16)
   }
+
+  //end services
 }
-//end services
+
+
+//\\\\\\\\\\\\\\\\\\ |  request modal | \\\\\\\\\\\\\\\\\\
+.close-modal {
+  background: $base-col;
+  width: 50px;
+  height: 50px;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  @extend .fx-c, .pos-a, .cur-p;
+}
+.request-modal {
+  padding: 20px 20px;
+  text-align: left;
+  border-radius: 0;
+  //request modal
+}
+
+//\\\\\\\\\\\\\\\\\\ |  burger  | \\\\\\\\\\\\\\\\\\
+$background: $base-col;
+
+.burger .burger-lines, .burger .burger-lines:after, .burger .burger-lines:before {
+  pointer-events: none;
+  display: block;
+  content: "";
+  border-radius: .25em;
+  background-color: $background;
+  height: .25em;
+  position: absolute;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  z-index: 10;
+  transition: top .2s .2s,left .1s,transform .2s,background-color .4s .2s;
+}
+.burger {
+  top: 35px;
+  height: 3em;
+  width: 3em;
+  position: absolute;
+  font-size: 12px;
+  z-index: 5;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  right: 15px;
+
+  &.open {
+    .burger-lines {
+      background-color: initial;
+
+      &::before {
+        transform: rotate(-45deg);
+        left: .5em;
+        top: 0;
+        background: #fff;
+      }
+
+      &::after {
+        left: .5em;
+        top: 0;
+        transform: rotate(45deg);
+        background: #fff;
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 150%;
+    width: 150%;
+    top: -25%;
+    left: -25%;
+  }
+
+  &-lines {
+    top: 50%;
+    margin-top: -.125em;
+    width: 100%;
+    transition: top .2s .2s, left .1s, transform .2s, background-color .4s .2s;
+    &::before {
+      left: 1em;
+      top: 1em;
+      width: 2em;
+    }
+
+    &::after {
+      width: 2em;
+      top: -1em;
+    }
+  }
+  //end burger
+}
+
 
 
 

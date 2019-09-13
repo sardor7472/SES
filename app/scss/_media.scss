@@ -15,7 +15,15 @@
 /* 768px (Min Width)
 =================================================================*/
 @media (min-width: 768px) {
-
+  .to-top {
+    margin-top: -30px;
+  }
+  .text-md-left {
+    text-align: left;
+  }
+  .burger {
+    display: none;
+  }
   /*========== 601px (Min Width) ==========*/
 }
 
@@ -78,20 +86,24 @@
       }
     }
   }
-
-
   /*========== 1199px (Max Width) ==========*/
 }
 
 /* 991px (Max Width)
 =================================================================*/
 @media (max-width: 991px) {
+  .regular-padding {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
   .project-box {
     flex-direction: column;
+
     &-img {
       flex: 1 1 auto;
       margin-right: 0;
       margin-bottom: 15px;
+
       img {
         width: 100%;
       }
@@ -132,6 +144,32 @@
 /* 767px (Max Width)
 =================================================================*/
 @media (max-width: 767px) {
+  body.blocked {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .header-logo {
+    padding-right: 40px;
+  }
+  .regular-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .main-one-title,
+  .main-two-title,
+  h1, .h1 {
+    font-size: 2.2rem;
+  }
+
+  .h2, h2 {
+    font-size: 2rem;
+  }
+
+
+  .partner-slider .owl-dots {
+    margin-top: 35px;
+    position: initial;
+  }
   .news-box {
     flex-direction: column;
 
@@ -146,7 +184,33 @@
       }
     }
   }
+  //navigation
+  .main-nav {
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    background: #003f6b;
+    transform: translateX(-100%);
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
   .header-nav {
+    flex: 1 1 auto;
+    justify-content: flex-start;
+
+    &-link {
+      flex-grow: 0;
+    }
+
     ul {
       flex-direction: column;
       align-items: center;
@@ -167,6 +231,8 @@
         }
       }
     }
+
+    //navigation
   }
 
 
@@ -175,13 +241,6 @@
       flex-wrap: wrap;
     }
 
-    &-contact {
-      margin-top: 20px;
-    }
-
-    &-phone {
-      margin-top: 20px;
-    }
 
     &-call {
       margin-top: 20px;
@@ -203,7 +262,24 @@
 /* 575px (Max Width)
 =================================================================*/
 @media (max-width: 575px) {
+  .regular-padding {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .main-one-title,
+  .main-two-title,
+  h1, .h1 {
+    font-size: 2rem;
+  }
 
+  .h2, h2 {
+    font-size: 1.8rem;
+  }
+
+
+  .partner-slider .owl-item {
+    opacity: 1;
+  }
 
   .footer-logo {
     text-align: center;

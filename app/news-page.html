@@ -17,19 +17,17 @@
 <!--start header-->
 
 <div class="header">
-
-
-    <!--    <div class="header-burger">-->
-    <!--        <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32"-->
-    <!--             width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"-->
-    <!--             xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>-->
-    <!--    </div>-->
+    <!--    showNavList-->
+    <div class="burger burger-squeeze">
+        <div class="burger-lines">
+        </div>
+    </div>
 
 
     <div class="container">
-        <div class="row">
-            <div class="col-xl-4 col-lg-3 text-center">
-                <div class="header-logo">
+        <div class="row equal-offsets">
+            <div class="col-xl-4 col-lg-3 text-center text-lg-left">
+                <div class="header-logo ">
                     <a href="#">
                         <img src="images/header-logo.png" alt="">
                     </a>
@@ -55,15 +53,15 @@
                         </div>
                     </div>
                     <div class="header-call">
-                        <a href="" class="wh-col">Заказать звонок</a>
+                        <a href="" class="wh-col button-hover open-modal" data-target="#request">Заказать звонок</a>
                     </div>
                     <div class="header-lang">
                         <span class="header-lang-rus">
-                            <a href="">Ru</a>
+                            <p>Ru</p>
                         </span>
                         <ul class="header-lang-lest">
-                            <li>RU</li>
-                            <li>En</li>
+                            <li><a href="">RU</a></li>
+                            <li><a href="">En</a></li>
                         </ul>
                     </div>
                 </div>
@@ -88,13 +86,16 @@
             </ul>
         </div>
         <div class="brochure text-md-left text-center">
-            <a href="">Скачать брошюру
+            <a href="" download>Скачать брошюру
                 <img src="images/header-skachat.png" alt="">
             </a>
         </div>
     </div>
 
 </div>
+
+<!--end header-->
+
 <div class="head-breadcrumb to-top bg-cover" style="background-image: url('images/news-bread-img.png')">
     <div class="container">
         <h1 class="main-one-title wh-col mb-2">Dolore magna aliqua</h1>
@@ -212,9 +213,7 @@
                         <p class="footer-left-ses">2019 © “SES” Все права защищены</p>
                     </div>
                     <div class="col-lg-3 col-md-5 col-sm-6">
-                        <p class="footer-right-sos">Web developed by <a href="http://sos.uz"
-                                                                        style="border-bottom: 1px solid;  color: inherit">SOS
-                            Group</a>
+                        <p class="footer-right-sos">Web developed by <a href="http://sos.uz" style="border-bottom: 1px solid;  color: inherit">SOS Group</a>
                         </p>
                     </div>
                 </div>
@@ -226,8 +225,34 @@
 <!--end footer-->
 
 
+<div id="request" style="display: none">
+    <div>
+        <span class="close-modal"><img src="images/close-image.png" alt=""></span>
+        <h1 class="main-one-title mb-2">Заказать звонок</h1>
+        <form action="">
+            <div class="form-group">
+                <input placeholder="Ваше имя" type="text">
+            </div>
+            <div class="form-group">
+                <input placeholder="Телефон" type="text">
+            </div>
+            <div class="form-group">
+                <input placeholder="Email" type="text">
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Комментарий" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="main-slider-more text-lg-right">
+                <button type="submit" class="button-hover"><span class="link-col text-uppercase">отправить</span> <img src="images/right-arrow.png" alt=""></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
 <script src="libs/jquery/jquery.min.js"></script>
 <script src="libs/OwlCarousel/owl.carousel.min.js"></script>
+<script src="libs/sweet-modal/jquery.sweet-modal.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
